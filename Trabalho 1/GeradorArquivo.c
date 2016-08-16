@@ -1,3 +1,9 @@
+/*UDESC - Matéria: Projeto de Arquivos - Professor: Rogério Silva
+Alunos: Arthur Nicodemus Borges, Éwerton Cercal, Julia Kondlatsch
+Tema 1 - Escola: cadastro de alunos contendo: nome do aluno, data de
+nascimento (dd/mm/aaaa), número de matricula, lista de disciplinas
+matriculadas (quantidade indeterminada)*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
