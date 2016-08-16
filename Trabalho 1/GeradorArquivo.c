@@ -10,13 +10,18 @@ matriculadas (quantidade indeterminada)*/
 #include <locale.h>
 #include <unistd.h>
 
-int CriaArquivo(char *nome, char *modo)
-{
+typedef struct{
+
+    char nome[]
+
+}aluno;
+
+int CriaArquivo(char *nome, char *modo){
 
     FILE *fp;
 
-    if ((fp  = fopen(nome,  modo)) == NULL)   //A primeira posição do vetor sinaliza o nome do arquivo, enquanto que a segunda informa qual o modo de abertura do mesmo.
-    {
+    if ((fp  = fopen(nome,  modo)) == NULL){    //A primeira posição do vetor sinaliza o nome do arquivo, enquanto que a segunda informa qual o modo de abertura do mesmo.
+
         printf ("Erro  na  abertura  do  arquivo.");
         exit (0);
     }
@@ -41,28 +46,25 @@ int PesquisaRegistros()
 
 }
 
-int main (void)
-
-{
+int main (void){
 
     FILE *file;
-    char nome_arq[] = "golias.bin";
+    char nome_arq[] = "base_alunos.bin";
     int escolha = 0;
 
     setlocale(LC_ALL, "");  //Com essa função a acentuação e caracteres especiais aparecem em tela conforme a localidade do sistema.
 
-    if ((file  = fopen(nome_arq, "r+b")) != NULL)   //Verifica se o arquivo existe.
-    {
+    if ((file  = fopen(nome_arq, "r+b")) != NULL){   //Verifica se o arquivo existe.
+
         fclose(file);
     }
-    else
-    {
+    else{
        CriaArquivo(nome_arq, "w+b");    //Aplicar tratamento para verificar se o arquivo já existe.
     }
 
-    do {
+    do{
 
-        do {
+        do{
 
             system("clear || cls"); //"Limpa" os dados em tela.
 
