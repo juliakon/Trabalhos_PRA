@@ -1,3 +1,4 @@
 #Extensões de arquivos a serem ignorados
 *.o
 *.exe
+*.bin
